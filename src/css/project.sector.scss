@@ -1,0 +1,66 @@
+@import "./common.scss";
+
+.project-div {
+  margin-top: 100px;
+  .txt-title {
+    font-size: $font-size-title;
+    color: white;
+    font-family: $font-fuzzy;
+  }
+  .sub-project-div {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include display-flex-wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .div-img {
+      width: 30%;
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
+      .img-project-logo {
+        width: 90%;
+        @include breakpoint(phablet) {
+          width: 60%;
+        }
+      }
+    }
+
+    .div-description {
+      width: 60%;
+      text-align: start;
+      @include breakpoint(phablet) {
+        width: 100%;
+        text-align: center;
+      }
+      .txt-project-name {
+        font-size: $font-size-sub-title;
+        color: white;
+        font-family: $font-luckiest;
+        line-height: 1.5;
+      }
+      .txt-project-description {
+        font-size: $font-size-text;
+        color: white;
+        font-family: $font-montserrat;
+        line-height: 1.5;
+        @include breakpoint(phablet) {
+          text-align: start;
+        }
+      }
+      .project-link {
+        text-decoration: underline;
+        font-size: $font-size-sub-text;
+        font-family: $font-montserrat;
+        color: white;
+        line-height: 2.3;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+}

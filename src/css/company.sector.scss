@@ -1,0 +1,47 @@
+@import "./common.scss";
+
+.company-div {
+  margin-top: 100px;
+  .txt-title {
+    font-size: $font-size-title;
+    color: white;
+    font-family: $font-fuzzy;
+  }
+  .sub-company-div {
+    margin-top: 30px;
+    .div-role {
+      @include display-flex-wrap;
+      .txt-company-name {
+        font-size: $font-size-text;
+        color: white;
+        font-family: $font-luckiest;
+      }
+      .txt-company-role {
+        margin-left: 50px;
+        font-size: $font-size-text;
+        color: white;
+        font-family: $font-montserrat;
+      }
+    }
+
+    .ul-point {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px dashed whitesmoke;
+      .li-point {
+        text-align: start;
+        color: white;
+        font-size: $font-size-sub-text;
+      }
+    }
+
+    &:last-child {
+      .ul-point {
+        margin-bottom: unset;
+        padding-bottom: unset;
+        border: none;
+      }
+    }
+  }
+}

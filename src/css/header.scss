@@ -1,0 +1,44 @@
+@import "./common.scss";
+.header {
+  .header-wrap {
+    padding: 30px 50px;
+    @include display-flex-wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: calc(100% - 100px);
+
+    @include breakpoint(mobile-m) {
+      padding: 3vw 5vw;
+      width: calc(100% - 10vw);
+    }
+
+    background: #012033;
+    .img-logo {
+      width: 60px;
+      height: 60px;
+      
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .txt-name {
+      text-align: center;
+      color: white;
+      font-size: 40px;
+      font-family: $font-fuzzy;
+      color: white;
+
+      @include breakpoint(mobile) {
+        font-size: 6vw;
+      }
+    }
+    .div-contact {
+      .contact-link {
+        margin: 0px 10px;
+        @include breakpoint(mobile) {
+          margin: 0px 1vw;
+        } 
+      }
+    }
+  }
+}

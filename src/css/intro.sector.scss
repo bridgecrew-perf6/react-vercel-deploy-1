@@ -1,0 +1,54 @@
+@import "./common.scss";
+
+.intro-div {
+  padding-top: 200px;
+  @include breakpoint(phablet) {
+    padding-top: 40vw;
+  }
+
+  animation-fill-mode: both;
+  animation-duration: 2000ms;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  opacity: 1;
+  animation-name: react-reveal-778458396415406-2;
+
+  .div-wrap {
+    @include display-flex-wrap;
+    justify-content: space-between;
+    
+    .div-bio {
+      width: 50%;
+      @include display-flex-wrap-center;
+
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
+
+      .txt-bio {
+        font-size: $font-size-text;
+        font-family: $font-montserrat;
+        color: white;
+        text-align: start;
+      }
+    }
+
+    .div-avatar {
+      width: 40%;
+      @include display-flex-wrap-center;
+      @include breakpoint(phablet) {
+        width: 100%; 
+      }
+      .img-avatar {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 80%;
+
+        @include breakpoint(phablet) {
+          width: 60%;
+          margin-bottom: 10vw;
+        }
+      }
+    }
+  }
+}

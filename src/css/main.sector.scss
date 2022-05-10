@@ -1,0 +1,18 @@
+@import "./common.scss";
+.div-main {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 100px;
+
+  background-color: rgb(11 36 53);
+  .div-context {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 25px;
+
+    @include breakpoint(phablet) {
+      padding: 0px 3vw;
+    }
+  }
+}
